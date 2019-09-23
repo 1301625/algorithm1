@@ -20,3 +20,11 @@ phone_number	return
 027778888 *****8888
 https://programmers.co.kr/learn/courses/30/lessons/12948
 """
+
+print(solution2("01033334444"))
+
+total =1
+for i in range(1,76):
+    total +=1*i
+
+print(total)

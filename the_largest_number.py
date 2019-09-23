@@ -11,5 +11,24 @@ def solution(numbers):
     answer=str(result2[-1])
     return answer
 
-numbers = [21,212]
+def perm(a): # permutation을 얻어내기 위한 함수를 정의한다. 인수로는 나열해야할 숫자들을 리스트로 받는다.
+    length=len(a) # 나열해야할 리스트의 길이(개수)를 계산한다.
+    if length==1: # 만약 나열해야할 리스트에 원소가 1개 밖에 없다면 그냥 인수로 받았던 리스트를 반환한다.
+        return [a]
+    else:
+        result=[]
+        for i in a:
+            b=a.copy()
+            b.remove(i)
+            b.sort()
+            for j in perm(b):
+                j.insert(0,i)
+                if j not in result:
+                    result.append(i)
+    return result
+
+
+
+numbers = [3,88,66]
 print(solution(numbers))
+print(perm(numbers))

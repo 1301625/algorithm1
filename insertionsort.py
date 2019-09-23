@@ -26,3 +26,11 @@ if __name__ == '__main__':
     b = [0,5,1,2,8,3,9,4]
     print(insertionsort(b))
     print(anthor_insertion_sort(a))
+
+    k = int(input())
+    if k <=100 and k >= 1:
+        for i in range(1,k):
+            for j in range(k):
+                if i>j:
+                    print("*", end="")
+            print('')
